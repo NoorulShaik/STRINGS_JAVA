@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class StringMethods {
     public static void main(String[] args) {
         String s1 = new String("NOORULH");
@@ -34,8 +36,31 @@ public class StringMethods {
         System.out.println(s1.substring(1));
         System.out.println(s1.toLowerCase());
 
-        System.out.println(s2.trim());
-        System.out.println(s2.strip()); //does same thing but unicode friendly
+//        System.out.println(s2.trim());
+//        System.out.println(s2.strip()); //does same thing but unicode friendly
+//        System.out.println(s1.repeat(3));
+//        System.out.println(s1.replace("NO" ,"MO"));
+//        System.out.println(s1.replaceAll("NO" ,"MO"));
+//        System.out.println(s1);
 
+        String n = "noorul,hussian,shaik";
+        String splt[] = n.split(",");
+        for(String s : splt){
+            System.out.println(s);
+        }
+       // System.out.println(Arrays.toString(splt));
+
+    //conversion
+        String s11 = String.valueOf(100);
+        System.out.println(s11);
+
+        //Advance methods
+        String s12 = new String("Hello");
+        String s13 = s12.intern(); //used to bring an object from heap to pool if it is not present
+
+        //format
+        String name = "Noorul";
+        int age = 20;
+        System.out.println(String.format("Hi this is %s and I am %s",name,age));
     }
 }
